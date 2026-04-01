@@ -1,0 +1,588 @@
+/*
+  Rock Dam Days 5K — Stylesheet
+
+  COLOR PALETTE (woodsy/cabin/lake vibes):
+  - Forest green:    #2D5016  (deep green — primary brand color, matches the medal)
+  - Pine green:      #4A7C2E  (lighter green for accents/hovers)
+  - Cream:           #FDF6EC  (warm off-white background — like sunlit cabin walls)
+  - Tan:             #E8DCC8  (warm neutral for card backgrounds)
+  - Bark brown:      #5C4033  (dark brown for text — softer than pure black)
+  - Warm white:      #FFFDF9  (slightly warm white for contrast sections)
+  - Sunset orange:   #D4763A  (accent color for buttons/CTAs — warmth from the flyer)
+
+  LAYOUT SYSTEM:
+  This site uses CSS Flexbox and Grid for layout.
+  - Flexbox: arranges items in a single row or column (nav, hero, footer)
+  - Grid: arranges items in rows AND columns (detail cards, sponsors)
+  The .container class centers content and sets a max width.
+*/
+
+/* ===== RESET & BASE ===== */
+/* A CSS reset removes default browser styling so everything starts consistent.
+   The * selector means "every element." */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border-box means padding and border are included in an element's width,
+       so a 300px-wide box stays 300px even with padding. Without this,
+       padding would ADD to the width, causing layout headaches. */
+}
+
+/* CSS Custom Properties (variables). Defined once, used everywhere.
+   If you want to tweak a color, change it here and it updates the whole site. */
+:root {
+    --color-forest: #2D5016;
+    --color-pine: #4A7C2E;
+    --color-cream: #FDF6EC;
+    --color-tan: #E8DCC8;
+    --color-bark: #5C4033;
+    --color-warm-white: #FFFDF9;
+    --color-sunset: #D4763A;
+    --color-sunset-dark: #B85F28;
+
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-body: "Open Sans", Arial, sans-serif;
+
+    --max-width: 1100px;
+    --section-padding: 5rem 1.5rem;
+}
+
+html {
+    /* scroll-behavior: smooth makes anchor links (#about, #details) scroll
+       smoothly instead of jumping instantly */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-bark);
+    background-color: var(--color-cream);
+    line-height: 1.7;
+    /* line-height controls the space between lines of text.
+       1.7 means each line is 1.7x the font size — comfortable for reading. */
+}
+
+/* The container class centers content and prevents it from stretching
+   edge-to-edge on wide screens */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    /* margin: 0 auto means 0 on top/bottom, auto on left/right.
+       "auto" left/right margins center a block element. */
+    padding: 0 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-forest);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-pine);
+}
+
+
+/* ===== BUTTONS ===== */
+/* Reusable button styles. The .btn class handles shared styling,
+   then modifier classes (.btn-primary, .btn-outline) add variations.
+   This is the BEM-ish pattern — base class + modifier. */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* transition makes property changes animate over 0.2 seconds
+       instead of snapping instantly — gives a polished feel */
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--color-sunset);
+    color: white;
+    border-color: var(--color-sunset);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-sunset-dark);
+    border-color: var(--color-sunset-dark);
+    color: white;
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.15rem;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-forest);
+    border-color: var(--color-forest);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-forest);
+    color: white;
+}
+
+.btn-nav {
+    background-color: var(--color-sunset);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+}
+
+.btn-nav:hover {
+    background-color: var(--color-sunset-dark);
+    color: white;
+}
+
+
+/* ===== NAVIGATION ===== */
+.main-nav {
+    position: sticky;
+    /* sticky: the nav scrolls normally until it hits top: 0, then sticks there */
+    top: 0;
+    background-color: var(--color-warm-white);
+    border-bottom: 2px solid var(--color-tan);
+    z-index: 100;
+    /* z-index controls stacking order. Higher = on top. 100 ensures
+       the nav floats above other content when scrolling. */
+    padding: 0.5rem 0;
+}
+
+.main-nav .container {
+    display: flex;
+    /* Flexbox: items arranged in a row */
+    align-items: center;
+    justify-content: space-between;
+    /* space-between pushes the logo left and links right */
+}
+
+.nav-logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    /* list-style: none removes the bullet points from the <ul> */
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-bark);
+}
+
+.nav-links a:hover {
+    color: var(--color-forest);
+}
+
+
+/* ===== HERO ===== */
+.hero {
+    background-color: var(--color-forest);
+    color: white;
+    text-align: center;
+    padding: 4rem 1.5rem 5rem;
+    /* A subtle radial gradient gives depth — slightly lighter in the center */
+    background: linear-gradient(135deg, #2D5016 0%, #3A6620 50%, #2D5016 100%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hero-logo {
+    width: 280px;
+    max-width: 80%;
+    margin-bottom: 1rem;
+    /* The logo is black on transparent. This CSS filter inverts it to white
+       so it shows up on the dark green background. */
+    filter: invert(1) brightness(2);
+}
+
+.hero-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.hero-date {
+    font-size: 1.25rem;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.hero-location {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+
+/* ===== COUNTDOWN ===== */
+.countdown {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    /* rgba = red, green, blue, alpha. Alpha 0.15 = 15% opaque white,
+       creating a frosted glass effect over the green background */
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    min-width: 80px;
+}
+
+.countdown-number {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+    margin-top: 0.25rem;
+}
+
+
+/* ===== SECTION SHARED STYLES ===== */
+.section {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    color: var(--color-forest);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* ===== ABOUT ===== */
+.about {
+    background-color: var(--color-warm-white);
+}
+
+.about-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+}
+
+
+/* ===== DETAILS ===== */
+.details {
+    background-color: var(--color-cream);
+}
+
+/* CSS Grid: creates a responsive grid that automatically wraps cards to new rows.
+   repeat(auto-fit, minmax(280px, 1fr)) means:
+   - Make as many columns as will fit
+   - Each column is at least 280px wide
+   - If there's extra space, columns stretch equally (1fr = 1 fraction of available space)
+   This is responsive WITHOUT needing media queries — the grid does the work. */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    background-color: var(--color-warm-white);
+    border: 2px solid var(--color-tan);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-3px);
+    /* Moves the card up 3px on hover — subtle lift effect */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.detail-card h3 {
+    font-family: var(--font-heading);
+    color: var(--color-forest);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* ===== REGISTRATION ===== */
+.register {
+    background-color: var(--color-forest);
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #2D5016 0%, #3A6620 50%, #2D5016 100%);
+}
+
+.register .section-title {
+    color: white;
+}
+
+.register-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.register-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.95;
+}
+
+.register .btn-primary {
+    margin-top: 0.5rem;
+    background-color: var(--color-sunset);
+    border-color: var(--color-sunset);
+}
+
+.register-note {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.75;
+}
+
+
+/* ===== SPONSORS ===== */
+.sponsors {
+    background-color: var(--color-warm-white);
+}
+
+.sponsors-subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+}
+
+.sponsor-card {
+    background-color: var(--color-cream);
+    border: 2px solid var(--color-tan);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    transition: transform 0.2s ease;
+}
+
+.sponsor-card:hover {
+    transform: translateY(-2px);
+}
+
+.sponsor-placeholder {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--color-forest);
+    text-align: center;
+    font-weight: 700;
+}
+
+.sponsor-card img {
+    max-height: 80px;
+    width: auto;
+}
+
+.sponsors-cta {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.sponsors-cta a {
+    color: var(--color-sunset);
+    font-weight: 700;
+}
+
+.sponsors-cta a:hover {
+    color: var(--color-sunset-dark);
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--color-bark);
+    color: var(--color-tan);
+    padding: 3rem 1.5rem 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
+    filter: invert(1) brightness(2);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.footer-info p {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.footer-social {
+    margin: 0.5rem 0;
+}
+
+.footer-social p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.footer .btn-outline {
+    color: var(--color-tan);
+    border-color: var(--color-tan);
+}
+
+.footer .btn-outline:hover {
+    background-color: var(--color-tan);
+    color: var(--color-bark);
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 1rem;
+}
+
+
+/* ===== RESPONSIVE DESIGN =====
+   Media queries let you apply CSS rules only when the screen is a certain size.
+   This is how sites adapt from desktop to mobile.
+   "max-width: 768px" means "apply these rules on screens 768px wide or smaller"
+   — that covers most phones and small tablets. */
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 3rem 1rem 4rem;
+    }
+
+    .hero-logo {
+        width: 200px;
+    }
+
+    .hero-tagline {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        gap: 0.75rem;
+    }
+
+    .countdown-item {
+        padding: 0.75rem;
+        min-width: 65px;
+    }
+
+    .countdown-number {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    :root {
+        --section-padding: 3.5rem 1rem;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    /* Hide the text links on very small screens, keep just the Register button */
+    .nav-links li:not(:last-child) {
+        display: none;
+    }
+
+    .hero-logo {
+        width: 160px;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

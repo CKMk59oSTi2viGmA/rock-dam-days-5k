@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rock Dam Days 5K Run/Walk 2026 | Clark County, WI</title>
+
+    <!-- Open Graph tags — control how the link looks when shared on Facebook -->
+    <meta property="og:title" content="Rock Dam Days 5K Run/Walk 2026">
+    <meta property="og:description" content="3rd Annual 5K at Rock Dam Lake, Clark County WI. Saturday, July 11, 2026. All proceeds benefit the Rock Dam Lake Association.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta name="description" content="Join the 3rd Annual Rock Dam Days 5K Run/Walk on July 11, 2026 at Rock Dam Lake in Clark County, WI. All proceeds benefit the Rock Dam Lake Association.">
+
+    <!-- Fonts: Literata (warm serif for headings) + Nunito Sans (friendly rounded sans-serif for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700;800&amp;family=Nunito+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols — clean icon font from Google (replaces emoji for a more polished look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS via CDN — a utility-first CSS framework.
+         Instead of writing custom CSS classes, you apply small utility classes directly in the HTML.
+         Example: "text-lg font-bold text-green-700" = large text, bold, dark green.
+         The CDN version loads Tailwind from the internet so we don't need a build step. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        // Tailwind config — customizes the default colors/fonts to match our "Terra" woodsy palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4a7c59",
+                        "primary-light": "#78a886",
+                        "surface": "#faf6f0",
+                        "surface-dim": "#dbd7cf",
+                        "surface-container": "#f0ece4",
+                        "surface-container-high": "#eae6de",
+                        "surface-container-highest": "#e4e0d8",
+                        "surface-container-low": "#f5f1ea",
+                        "on-surface": "#2e3230",
+                        "on-surface-variant": "#4a4e4a",
+                        "outline-variant": "#c4c8bc",
+                        "tertiary": "#705c30",
+                        "tertiary-container": "#c4a66a",
+                        "secondary-container": "#f0e8db",
+                        "sunset": "#D4763A",
+                        "sunset-dark": "#B85F28",
+                    },
+                    fontFamily: {
+                        "headline": ["Literata", "serif"],
+                        "body": ["Nunito Sans", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* FAQ toggle — uses the <details> HTML element which has built-in expand/collapse */
+        details summary { cursor: pointer; list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform 0.2s ease; }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body antialiased">
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-surface border-b border-stone-200">
+    <div class="flex items-center gap-2">
+        <img src="assets/images/logo.png" alt="Rock Dam Days 5K Logo" class="h-10 w-auto">
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold tracking-tight" href="#about">About</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold tracking-tight" href="#details">Details</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold tracking-tight" href="#faq">FAQ</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold tracking-tight" href="#sponsors">Sponsors</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold tracking-tight" href="#contact">Contact</a>
+    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCYGMHmn3qE46TFobQPJPpVKPJ_Z3mjOXMOQ3EqgJeS-qzA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:opacity-90 transition-all shadow-sm text-sm">
+        Register Now
+    </a>
+</nav>
+
+<main class="pt-20">
+
+<!-- ========== HERO SECTION ========== -->
+<section class="relative min-h-[750px] flex items-center justify-center overflow-hidden px-6 bg-surface" id="hero">
+    <!-- Decorative background icons (faded, non-interactive) -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-10"><span class="material-symbols-outlined text-9xl">forest</span></div>
+        <div class="absolute bottom-20 right-10"><span class="material-symbols-outlined text-9xl">waves</span></div>
+        <div class="absolute top-1/2 right-1/4"><span class="material-symbols-outlined text-8xl">cabin</span></div>
+    </div>
+
+    <div class="max-w-4xl w-full text-center z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary font-bold text-sm mb-6 border border-primary/20">
+            <span class="material-symbols-outlined text-base">calendar_today</span>
+            <span>3rd Annual Community Run</span>
+        </div>
+
+        <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-tight mb-4">
+            Rock Dam Days 5K<br/>Run/Walk 2026
+        </h1>
+
+        <p class="text-xl md:text-2xl text-tertiary font-medium mb-4">
+            Saturday, July 11, 2026 &bull; 8:00 AM
+        </p>
+        <p class="text-lg text-on-surface-variant mb-10">
+            Rock Dam Lake &bull; Clark County, WI
+        </p>
+
+        <!-- Countdown timer — JavaScript updates these every second -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mb-12">
+            <div class="bg-surface-container p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+                <span id="countdown-days" class="block text-4xl font-headline font-bold text-primary">--</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Days</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+                <span id="countdown-hours" class="block text-4xl font-headline font-bold text-primary">--</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Hours</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+                <span id="countdown-minutes" class="block text-4xl font-headline font-bold text-primary">--</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Min</span>
+            </div>
+            <div class="bg-surface-container p-6 rounded-xl border border-outline-variant/30 shadow-sm">
+                <span id="countdown-seconds" class="block text-4xl font-headline font-bold text-primary">--</span>
+                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Sec</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCYGMHmn3qE46TFobQPJPpVKPJ_Z3mjOXMOQ3EqgJeS-qzA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">how_to_reg</span> Register Now
+            </a>
+            <!-- TODO: Replace # with MapMyRun link once the course is created -->
+            <a href="#course" class="bg-surface border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/5 transition-all flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined">map</span> View Course
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ABOUT SECTION ========== -->
+<section class="py-24 bg-surface-container-low px-6" id="about">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <!-- Logo / branding image -->
+        <div class="relative group">
+            <div class="absolute -inset-4 bg-tertiary/10 rounded-2xl transform -rotate-3 group-hover:rotate-0 transition-transform"></div>
+            <div class="relative rounded-2xl shadow-xl w-full h-[400px] bg-white flex items-center justify-center p-12">
+                <img src="assets/images/logo.png" alt="Rock Dam Days 5K Run/Walk 2026 Logo" class="max-h-full max-w-full object-contain">
+            </div>
+        </div>
+        <div>
+            <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">Our Community Tradition</h2>
+            <div class="w-20 h-1 bg-tertiary mb-8"></div>
+            <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                Lace up for fun and fitness at the <strong>3rd Annual Rock Dam Days 5K Run/Walk!</strong>
+                Whether you're a competitive runner or looking for a scenic morning stroll with the family,
+                this community event has something for everyone.
+            </p>
+            <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+                All proceeds benefit the <strong>Rock Dam Lake Association</strong>, supporting conservation
+                and community efforts to keep our lake and surrounding area thriving for generations to come.
+            </p>
+            <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                Walkers, joggers, and runners of all ages and abilities are welcome. Bring the family,
+                enjoy the morning, and support a great cause!
+            </p>
+            <div class="flex items-center gap-4 text-tertiary font-bold">
+                <span class="material-symbols-outlined">eco</span>
+                <span>Supporting Rock Dam Lake Conservation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RACE DETAILS SECTION ========== -->
+<section class="py-24 px-6 bg-surface" id="details">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-headline text-4xl font-bold text-primary mb-4">Event Details</h2>
+            <p class="text-on-surface-variant max-w-xl mx-auto font-medium">
+                Everything you need to know for race day. Register by <strong>June 15, 2026</strong> to guarantee your t-shirt!
+            </p>
+        </div>
+
+        <!-- Bento-style grid — cards with different widths for visual interest -->
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+
+            <!-- Date Card -->
+            <div class="md:col-span-3 bg-surface-container-high p-8 rounded-2xl border-l-8 border-primary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-primary text-4xl mb-4">event</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">Date</h3>
+                <p class="text-on-surface-variant text-lg">Saturday, July 11, 2026</p>
+            </div>
+
+            <!-- Time Card -->
+            <div class="md:col-span-3 bg-surface-container-high p-8 rounded-2xl border-l-8 border-primary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-primary text-4xl mb-4">schedule</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">Time</h3>
+                <p class="text-on-surface-variant text-lg">8:00 AM Start</p>
+                <p class="text-on-surface-variant">Day-of registration closes at 7:45 AM</p>
+            </div>
+
+            <!-- Location Card -->
+            <div class="md:col-span-4 bg-secondary-container p-8 rounded-2xl border-l-8 border-tertiary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-tertiary text-4xl mb-4">location_on</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">Location</h3>
+                <p class="text-on-surface-variant text-lg">AKA Lakeside &amp; Rock Dam Rod and Gun Club</p>
+                <p class="text-on-surface-variant">N8560 N Hay Creek Rd, Willard, WI</p>
+            </div>
+
+            <!-- Cost Card -->
+            <div class="md:col-span-2 bg-surface-container-high p-8 rounded-2xl border-l-8 border-primary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-primary text-4xl mb-4">payments</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">Cost</h3>
+                <p class="text-on-surface-variant text-lg font-bold">$20 Registration</p>
+                <p class="text-on-surface-variant text-sm">Includes t-shirt &amp; race packet</p>
+            </div>
+
+            <!-- Packet Pickup Card -->
+            <div class="md:col-span-3 bg-surface-container-high p-8 rounded-2xl border-l-8 border-tertiary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-tertiary text-4xl mb-4">inventory_2</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">Packet Pick-Up</h3>
+                <p class="text-on-surface-variant"><strong>Friday, July 10:</strong> 5:00 - 7:00 PM</p>
+                <p class="text-on-surface-variant text-sm mb-2">N8565 Lakeside Road</p>
+                <p class="text-on-surface-variant"><strong>Saturday, July 11:</strong> 6:45 - 7:45 AM</p>
+                <p class="text-on-surface-variant text-sm">AKA Lakeside (race day)</p>
+            </div>
+
+            <!-- What You Get Card -->
+            <div class="md:col-span-3 bg-surface-container-high p-8 rounded-2xl border-l-8 border-primary shadow-sm hover:translate-y-[-4px] transition-all">
+                <span class="material-symbols-outlined text-primary text-4xl mb-4">emoji_events</span>
+                <h3 class="text-xl font-bold mb-2 font-headline">What You Get</h3>
+                <ul class="text-on-surface-variant space-y-1">
+                    <li>&#127941; T-shirt with 2026 logo (register by June 15!)</li>
+                    <li>&#129351; Finisher medal for all participants</li>
+                    <li>&#127942; Prizes for top 3 overall finishers</li>
+                    <li>&#128166; Water stations &amp; snacks on course</li>
+                </ul>
+            </div>
+
+            <!-- Payment / Registration CTA -->
+            <div class="md:col-span-6 bg-primary/5 p-10 rounded-2xl border-2 border-dashed border-primary/30 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+                <div class="flex -space-x-4">
+                    <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-3xl">payments</span>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-primary text-white shadow-md flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">smartphone</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-headline mb-1">Payment Options</h3>
+                    <p class="text-on-surface-variant">
+                        <strong>Venmo:</strong> <a href="https://venmo.com/jomegs" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline">@jomegs</a> (Megan Johnson)
+                        &nbsp;&bull;&nbsp; <strong>Cash</strong> accepted in-person at packet pick-up.
+                    </p>
+                </div>
+                <div class="hidden lg:block h-12 w-px bg-outline-variant/30 mx-4"></div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCYGMHmn3qE46TFobQPJPpVKPJ_Z3mjOXMOQ3EqgJeS-qzA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="bg-sunset text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-sunset-dark transition-all whitespace-nowrap">
+                    Register Online
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== COURSE SECTION ========== -->
+<section class="py-16 px-6 bg-surface-container-low" id="course">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-headline text-4xl font-bold text-primary mb-4">The Course</h2>
+        <p class="text-on-surface-variant text-lg mb-6">
+            The 5K route winds through scenic roads near Rock Dam Lake. Water stations and golf cart support
+            will be positioned along the course.
+        </p>
+        <!-- TODO: Replace this # with the actual MapMyRun link once created -->
+        <a href="#" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all">
+            <span class="material-symbols-outlined">map</span> View Course on MapMyRun
+        </a>
+        <p class="text-on-surface-variant text-sm mt-4 italic">Course map coming soon!</p>
+    </div>
+</section>
+
+<!-- ========== ON-COURSE SUPPORT ========== -->
+<section class="py-16 px-6 bg-surface">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-shrink-0">
+                <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-4xl">volunteer_activism</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-headline text-2xl font-bold text-on-surface mb-3">On-Course Support</h3>
+                <p class="text-on-surface-variant text-lg leading-relaxed">
+                    Water and snacks will be provided at the start/finish line for all participants.
+                    Multiple water stations along the course, plus volunteers in golf carts driving
+                    the route to offer support and water. You're never far from help!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== MEDAL SECTION ========== -->
+<section class="py-16 px-6 bg-surface">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-shrink-0">
+            <img src="assets/images/medal.jpg" alt="Rock Dam Days 5K 2026 Finisher Medal — Wisconsin state shape with pine trees and forest green ribbon" class="w-64 h-auto rounded-2xl shadow-xl">
+        </div>
+        <div>
+            <h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Every Finisher Gets a Medal</h3>
+            <p class="text-on-surface-variant text-lg leading-relaxed">
+                Cross that finish line and take home a custom Rock Dam Days finisher medal.
+                This year's design features the Wisconsin state outline with pine trees and
+                the Rock Dam Days logo. Plus, prizes for the top 3 overall finishers!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FAQ SECTION ========== -->
+<section class="py-24 px-6 bg-surface-container-low" id="faq">
+    <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-headline text-4xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Each FAQ uses the <details> element — a built-in HTML element that
+                 expands/collapses without needing JavaScript. The <summary> is the
+                 always-visible clickable header. -->
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Can I walk instead of run?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    Yes! This is a 5K Run/Walk. Walkers of all paces are welcome and encouraged.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Is this a timed race?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    No. This is an unsanctioned, untimed, fun run event. No official times will be
+                    recorded or provided. We do our best to map out the course and get as close to
+                    3.1 miles as possible, but the course may be slightly shorter or longer.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Do I get a t-shirt?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    Yes! Your $20 registration includes a t-shirt with the 2026 Rock Dam Days logo.
+                    <strong>Register by June 15, 2026</strong> to guarantee your size. After that date,
+                    shirts are first-come, first-served.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Can I register on race day?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    Yes! Day-of registration is available from 6:45 - 7:45 AM at AKA Lakeside. Cash or Venmo accepted.
+                    Just note that t-shirt sizes may be limited for day-of registrants.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>How do I pay?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    <strong>Venmo:</strong> Send $20 to <strong>@jomegs</strong> (Megan Johnson).<br>
+                    <strong>Cash:</strong> Pay in person at packet pick-up (Friday evening or Saturday morning).
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Will there be water on the course?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    Yes! Water and snacks at the start/finish line, multiple water stations on the course,
+                    and volunteers in golf carts driving the route to offer water and support.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Are there prizes?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    Every finisher receives a medal! Plus, prizes are awarded to the top 3 overall finishers.
+                </div>
+            </details>
+
+            <details class="bg-surface rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden">
+                <summary class="flex items-center justify-between p-6 font-bold text-on-surface hover:bg-surface-container transition-colors">
+                    <span>Where does the money go?</span>
+                    <span class="material-symbols-outlined faq-chevron text-primary">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-on-surface-variant">
+                    All proceeds benefit the <strong>Rock Dam Lake Association</strong>, which supports
+                    lake conservation, water quality, and community initiatives in the Rock Dam Lake area.
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SPONSORS SECTION ========== -->
+<section class="py-24 bg-surface-container-highest px-6" id="sponsors">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-headline text-4xl font-bold text-on-surface mb-4">Our Generous Sponsors</h2>
+            <p class="text-on-surface-variant">Thank you to our 2025 sponsors. Stay tuned for 2026 sponsor announcements!</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="bg-surface h-32 rounded-xl flex items-center justify-center p-6 border border-outline-variant shadow-sm hover:shadow-md hover:scale-105 transition-all">
+                <!-- Replace with logo: <img src="assets/images/sponsor-thorp-supervalu.png" alt="Thorp SuperValu"> -->
+                <span class="text-on-surface font-bold text-center font-headline">Thorp SuperValu</span>
+            </div>
+            <div class="bg-surface h-32 rounded-xl flex items-center justify-center p-6 border border-outline-variant shadow-sm hover:shadow-md hover:scale-105 transition-all">
+                <span class="text-on-surface font-bold text-center font-headline">Marieke Gouda</span>
+            </div>
+            <div class="bg-surface h-32 rounded-xl flex items-center justify-center p-6 border border-outline-variant shadow-sm hover:shadow-md hover:scale-105 transition-all">
+                <span class="text-on-surface font-bold text-center font-headline">AKA Lakeside</span>
+            </div>
+            <div class="bg-surface h-32 rounded-xl flex items-center justify-center p-6 border border-outline-variant shadow-sm hover:shadow-md hover:scale-105 transition-all">
+                <span class="text-on-surface font-bold text-center font-headline">Cal's Rock Dam Resort</span>
+            </div>
+        </div>
+        <div class="mt-16 text-center">
+            <p class="text-tertiary font-semibold mb-4">Interested in becoming a sponsor?</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCYGMHmn3qE46TFobQPJPpVKPJ_Z3mjOXMOQ3EqgJeS-qzA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="bg-tertiary text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all inline-block">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="w-full py-12 px-8 bg-stone-100 border-t border-stone-200" id="contact">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+
+        <div class="flex flex-col gap-3">
+            <span class="font-headline text-lg text-tertiary font-bold">Rock Dam Lake Association</span>
+            <p class="text-stone-500 max-w-xs">
+                All proceeds benefit the Rock Dam Lake Association — dedicated to conservation
+                and community at Rock Dam Lake.
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <span class="font-bold text-primary uppercase tracking-wider text-xs">Contact</span>
+            <p class="text-stone-600">Questions? Reach out on Facebook:</p>
+            <a href="https://www.facebook.com/rockdamdays5k" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
+                <span class="material-symbols-outlined">forum</span> Message us on Facebook
+            </a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <span class="font-bold text-primary uppercase tracking-wider text-xs">Connect</span>
+            <a href="https://www.facebook.com/rockdamdays5k" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
+                <span class="material-symbols-outlined">group</span> Rock Dam Days 5k on Facebook
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScdCYGMHmn3qE46TFobQPJPpVKPJ_Z3mjOXMOQ3EqgJeS-qzA/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-sunset text-white px-6 py-3 rounded-full font-bold hover:bg-sunset-dark transition-all mt-2">
+                <span class="material-symbols-outlined">how_to_reg</span> Register Now
+            </a>
+        </div>
+
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-stone-200 text-center text-stone-400 text-xs">
+        <p>&copy; 2026 Rock Dam Days 5K Run/Walk. All proceeds benefit the Rock Dam Lake Association.</p>
+    </div>
+</footer>
+
+<!-- Countdown timer script -->
+<script src="js/countdown.js"></script>
+
+</body>
+</html>
